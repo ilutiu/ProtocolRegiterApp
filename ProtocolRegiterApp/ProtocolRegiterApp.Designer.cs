@@ -1,7 +1,7 @@
 ﻿
 namespace ProtocolRegiterApp
 {
-    partial class Form1
+    partial class ProtocolRegiterApp
     {
         /// <summary>
         /// Required designer variable.
@@ -50,15 +50,15 @@ namespace ProtocolRegiterApp
             this.lblParamValues.Size = new System.Drawing.Size(0, 13);
             this.lblParamValues.TabIndex = 1;
             // 
-            // Form1
+            // ProtocolRegiterApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblParamValues);
             this.Controls.Add(this.lblParams);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ProtocolRegiterApp";
+            this.Text = "ProtocolRegiter";
             this.ResumeLayout(false);
             this.PerformLayout();
 
