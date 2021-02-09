@@ -70,14 +70,14 @@ Page InstFiles
 
 
 Section "Register protocol" ; This example uses HKCU\Software\Classes and not HKCR so it works as non-admin
-WriteRegStr HKCU "Software\Classes\PAMProto" "" "URL:PAM Protocol"
-WriteRegStr HKCU "Software\Classes\PAMProto" "FriendlyTypeName" "PAM protocol"
-WriteRegStr HKCU "Software\Classes\PAMProto" "URL Protocol" ""
+WriteRegStr HKCU "Software\Classes\PAM" "" "URL:PAM Protocol"
+WriteRegStr HKCU "Software\Classes\PAM" "FriendlyTypeName" "PAM protocol"
+WriteRegStr HKCU "Software\Classes\PAM" "URL Protocol" ""
 ; Optional: UseOriginalUrlEncoding
-WriteRegExpandStr HKCU "Software\Classes\PAMProto\DefaultIcon" "" "%SystemRoot%\system32\shell32.dll,6"
-WriteRegStr HKCU "Software\Classes\PAMProto\shell" "" "open"
-WriteRegStr HKCU "Software\Classes\PAMProto\shell\open" "FriendlyAppName" "PAM app for PAM protocol"
-WriteRegStr HKCU "Software\Classes\PAMProto\shell\open\command" "" '"$INSTDIR\\ProtocolRegiterApp.exe" /uri="%1" /params="%2 %3 %4"'
+WriteRegExpandStr HKCU "Software\Classes\PAM\DefaultIcon" "" "%SystemRoot%\system32\shell32.dll,6"
+WriteRegStr HKCU "Software\Classes\PAM\shell" "" "open"
+WriteRegStr HKCU "Software\Classes\PAM\shell\open" "FriendlyAppName" "PAM app for PAM protocol"
+WriteRegStr HKCU "Software\Classes\PAM\shell\open\command" "" '"$INSTDIR\\ProtocolRegiterApp.exe" /uri="%1" /params="%2 %3 %4"'
 SectionEnd
 
 
@@ -89,7 +89,7 @@ Delete "$INSTDIR\Uninstall.exe"
 RMDir "$INSTDIR"
 
 DeleteRegKey /ifempty HKCU "Software\ProtocolRegiterApp"
-DeleteRegKey HKCU "Software\Classes\PAMProto"
+DeleteRegKey HKCU "Software\Classes\PAM"
 
 SectionEnd 
 
